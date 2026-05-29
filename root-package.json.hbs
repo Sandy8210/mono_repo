@@ -1,0 +1,21 @@
+{
+  "name": "kvb-monorepo",
+  "private": true,
+  "packageManager": "pnpm@{{PNPM_VERSION}}",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "dependencies": {
+{{SHARED_DEPS}}
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
